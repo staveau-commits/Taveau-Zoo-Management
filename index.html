@@ -24,37 +24,25 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--cream); color: var(--ink); font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; }
-
-  /* Header */
   .site-header { background: var(--ink); color: var(--cream); padding: 2.5rem 1.5rem 2rem; text-align: center; }
   .site-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px); font-weight: 600; letter-spacing: -0.5px; }
   .site-header p { color: #B0A898; margin-top: 0.5rem; font-size: 14px; }
   .header-animals { font-size: 22px; letter-spacing: 4px; margin-bottom: 1rem; }
-
-  /* Tabs */
   .tab-bar { background: var(--card); border-bottom: 1px solid var(--border); display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; position: sticky; top: 0; z-index: 10; }
   .tab-bar::-webkit-scrollbar { display: none; }
   .tab-btn { padding: 14px 20px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--ink-light); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: all 0.15s; }
   .tab-btn:hover { color: var(--ink); }
   .tab-btn.active { color: var(--orange); border-bottom-color: var(--orange); }
-
-  /* Layout */
   .container { max-width: 720px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
-
-  /* Alert */
   .alert { border-radius: 8px; padding: 12px 16px; font-size: 13px; line-height: 1.6; margin-bottom: 1.25rem; border: 1px solid; }
   .alert-hawk { background: var(--red-pale); color: #7A1F1A; border-color: #F0BDB9; }
   .alert-info { background: var(--orange-pale); color: #7A3A08; border-color: #F5C89A; }
   .alert-perk { background: var(--green-pale); color: #1A5A32; border-color: #A8D8BA; }
-
-  /* Progress bar */
   .progress-wrap { background: var(--border); border-radius: 4px; height: 4px; margin-bottom: 1.5rem; overflow: hidden; }
   .progress-bar { height: 4px; background: var(--orange); border-radius: 4px; transition: width 0.3s ease; }
   .progress-label { font-size: 12px; color: var(--ink-light); margin-bottom: 6px; }
-
-  /* Animal sections */
   .animal-section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 1rem; overflow: hidden; box-shadow: var(--shadow); }
   .animal-header { display: flex; align-items: center; gap: 10px; padding: 13px 16px; cursor: pointer; user-select: none; background: var(--card); }
   .animal-header:hover { background: #FAFAF8; }
@@ -65,8 +53,6 @@
   .animal-section.collapsed .animal-chevron { transform: rotate(-90deg); }
   .animal-section.collapsed .animal-body { display: none; }
   .animal-body { border-top: 1px solid var(--border); }
-
-  /* Tasks */
   .task-row { display: flex; align-items: flex-start; gap: 12px; padding: 11px 16px; cursor: pointer; border-top: 1px solid #F0EDE8; transition: background 0.1s; }
   .task-row:first-child { border-top: none; }
   .task-row:hover { background: #FAFAF8; }
@@ -79,62 +65,43 @@
   .task-text { font-size: 14px; line-height: 1.5; }
   .task-note { font-size: 12px; color: var(--ink-light); margin-top: 3px; line-height: 1.4; }
   .task-note.warn { color: var(--red); }
-
-  /* Reference cards */
   .ref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.25rem; }
   .ref-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; box-shadow: var(--shadow); }
   .ref-card.full { grid-column: 1 / -1; }
   .ref-name { font-weight: 500; font-size: 14px; }
   .ref-detail { font-size: 13px; color: var(--ink-light); margin-top: 3px; }
   .ref-detail a { color: var(--orange); text-decoration: none; }
-
-  /* Commands */
   .cmd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; padding: 0 14px 14px; }
   .cmd-card { background: var(--cream); border-radius: 6px; padding: 8px 10px; }
   .cmd-word { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 500; color: var(--orange); }
   .cmd-desc { font-size: 12px; color: var(--ink-mid); margin-top: 2px; line-height: 1.3; }
-
-  /* Safety */
   .safety-item { padding: 12px 16px; border-top: 1px solid #F0EDE8; }
   .safety-item:first-child { border-top: none; }
   .safety-title { font-weight: 500; font-size: 14px; }
   .safety-note { font-size: 12px; color: var(--ink-mid); margin-top: 3px; line-height: 1.4; }
   .safety-note.urgent { color: var(--red); }
-
-  /* Reset */
   .reset-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-light); background: none; border: 1px solid var(--border); border-radius: 6px; padding: 7px 14px; cursor: pointer; margin-top: 0.75rem; transition: all 0.15s; }
   .reset-btn:hover { color: var(--ink); border-color: var(--ink-mid); }
-
-  /* Summary stats */
   .summary { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.25rem; }
   .stat { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; box-shadow: var(--shadow); }
   .stat-num { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600; color: var(--ink); }
   .stat-label { font-size: 12px; color: var(--ink-light); margin-top: 2px; }
-
-  @media (max-width: 480px) {
-    .ref-grid { grid-template-columns: 1fr; }
-    .ref-card.full { grid-column: 1; }
-  }
+  @media (max-width: 480px) { .ref-grid { grid-template-columns: 1fr; } .ref-card.full { grid-column: 1; } }
 </style>
 </head>
 <body>
-
 <header class="site-header">
   <div class="header-animals">🐕🐕🐱🐱🐔🐔🐔🐔🐢</div>
   <h1>The Taveau Zoo</h1>
   <p>Pet sitter guide · Instructions for the bravest only</p>
 </header>
-
 <nav class="tab-bar" id="tabBar">
   <button class="tab-btn active" onclick="switchTab('morning')">☀️ Morning</button>
   <button class="tab-btn" onclick="switchTab('evening')">🌙 Evening</button>
   <button class="tab-btn" onclick="switchTab('asneeded')">📋 As needed</button>
   <button class="tab-btn" onclick="switchTab('reference')">📖 Reference</button>
 </nav>
-
 <div class="container">
-
-  <!-- MORNING -->
   <div class="tab-panel active" id="tab-morning">
     <div class="summary" id="morning-summary"></div>
     <div class="progress-label" id="morning-progress-label"></div>
@@ -143,8 +110,6 @@
     <div id="morning-sections"></div>
     <button class="reset-btn" onclick="resetTab('morning')">↺ Reset morning</button>
   </div>
-
-  <!-- EVENING -->
   <div class="tab-panel" id="tab-evening">
     <div class="summary" id="evening-summary"></div>
     <div class="progress-label" id="evening-progress-label"></div>
@@ -152,27 +117,21 @@
     <div id="evening-sections"></div>
     <button class="reset-btn" onclick="resetTab('evening')">↺ Reset evening</button>
   </div>
-
-  <!-- AS NEEDED -->
   <div class="tab-panel" id="tab-asneeded">
     <div id="asneeded-sections"></div>
   </div>
-
-  <!-- REFERENCE -->
   <div class="tab-panel" id="tab-reference">
     <div class="alert alert-perk">🥚 <strong>Perk of the job:</strong> Keep all the eggs! Usually 2–3 in the morning and 1 in the evening. Egg boxes are in the coop area.</div>
     <div class="alert alert-info">🐔 <strong>Bell2:</strong> She has a large mass on the front of her body — she's had it since birth. Totally normal, don't be alarmed.</div>
-
     <div class="ref-grid">
       <div class="ref-card"><div class="ref-name">Sébastien</div><div class="ref-detail"><a href="tel:+16502830125">+1 650 283 0125</a></div></div>
       <div class="ref-card"><div class="ref-name">Rebekah</div><div class="ref-detail"><a href="tel:+16502837648">+1 650 283 7648</a></div></div>
       <div class="ref-card full"><div class="ref-name">Whipple Avenue Pet Hospital</div><div class="ref-detail">635 Whipple Ave, Redwood City · <a href="tel:+16503699096">(650) 369-9096</a></div></div>
     </div>
-
     <div class="animal-section">
       <div class="animal-header" onclick="toggleSection(this)">
         <span class="animal-emoji">🐕</span>
-        <span class="animal-name">Dog commands — Lyra & Henny</span>
+        <span class="animal-name">Dog commands — Lyra &amp; Henny</span>
         <span class="animal-chevron">▼</span>
       </div>
       <div class="animal-body">
@@ -184,12 +143,12 @@
           <div class="cmd-card"><div class="cmd-word">Off</div><div class="cmd-desc">If they jump on you or furniture</div></div>
           <div class="cmd-card"><div class="cmd-word">Come</div><div class="cmd-desc">Henny is still learning — be enthusiastic</div></div>
           <div class="cmd-card"><div class="cmd-word">Get it</div><div class="cmd-desc">Lyra waits before eating until you say this</div></div>
+          <div class="cmd-card"><div class="cmd-word">Crate</div><div class="cmd-desc">Henny goes to his crate on the patio. His safe space — Lyra must never enter.</div></div>
           <div class="cmd-card"><div class="cmd-word">Inside / Outside</div><div class="cmd-desc">Move dogs to kitchen or backyard</div></div>
           <div class="cmd-card"><div class="cmd-word">Bad</div><div class="cmd-desc">Only if caught red-handed — they won't remember anything older</div></div>
         </div>
       </div>
     </div>
-
     <div class="animal-section">
       <div class="animal-header" onclick="toggleSection(this)">
         <span class="animal-emoji">🚨</span>
@@ -198,16 +157,15 @@
       </div>
       <div class="animal-body">
         <div class="safety-item"><div class="safety-title">Side gates — latch every time you pass through</div><div class="safety-note urgent">Whenever you walk between the backyard and the front of the house. Both dogs will bolt into the neighborhood the moment a gate is left unlatched, even for a second. If Henny gets out: call his name and run the opposite direction — he'll follow.</div></div>
+        <div class="safety-item"><div class="safety-title">Henny's crate on the patio</div><div class="safety-note urgent">It's his chill zone and safe space. Lyra must NEVER enter. Do not put any toys or objects in or near it — if a toy rolls in and Lyra goes for it, Henny will attack her badly. Keep it clear.</div></div>
         <div class="safety-item"><div class="safety-title">Dog fight (very rare)</div><div class="safety-note">If Henny won't let go: apply pressure on his backside — the shock releases his grip. Or use a chair to separate. Your safety first, then Lyra, then Henny.</div></div>
-        <div class="safety-item"><div class="safety-title">Toilet seats — always down</div><div class="safety-note">Tuxy will go in and run everywhere in the house afterward.</div></div>
+        <div class="safety-item"><div class="safety-title">Toilet seats — always down</div><div class="safety-note">Tuxy will go in and run wet-pawed everywhere in the house.</div></div>
         <div class="safety-item"><div class="safety-title">Linguini stays indoors</div><div class="safety-note">Not street savvy. Guest room and kitchen only — not the two other bedrooms.</div></div>
-        <div class="safety-item"><div class="safety-title">If a chicken is lost to a hawk</div><div class="safety-note">Sad but it happens — we've lost a few before. Don't panic, don't feel bad. Animal control has instructed us to bag any carcass and place in regular trash. No pickup. Just text us.</div></div>
+        <div class="safety-item"><div class="safety-title">If a chicken is lost to a hawk</div><div class="safety-note">Sad but it happens — we've lost a few. Don't panic, don't feel bad. Animal control: bag carcass in regular trash. No pickup. Just text us.</div></div>
       </div>
     </div>
   </div>
-
 </div>
-
 <script>
 const tasks = {
   morning: [
@@ -216,14 +174,14 @@ const tasks = {
       { id: "dm1", label: "Give Lyra her bowl first (left side)", note: "Say Get it so she knows she can eat." },
       { id: "dm2", label: "Give Henny his bowl second (right side)" },
       { id: "dm3", label: "1 cup dry food + 1 full can wet food in each bowl", note: "Mighty Dog or half of a larger can per dog. Wet food is morning only." },
-      { id: "dm4", label: "Refill both outdoor water bowls", note: "One next to food on deck, one along the wall in paved area — keep one always in the shade." },
+      { id: "dm4", label: "Refill both outdoor water bowls", note: "One next to food on deck, one along the wall — keep one always in the shade." },
       { id: "dm5", label: "Let dogs out into the backyard for the day" },
-      { id: "dm6", label: "Side gate: latch properly if heading to the front of the house", note: "⚠️ Both dogs will bolt the moment it's left unlatched, even briefly.", urgent: true }
+      { id: "dm6", label: "Side gate: latch properly if heading to front of house", note: "⚠️ Both dogs will bolt the moment it's left unlatched, even briefly.", urgent: true }
     ]},
     { animal: "🐱 Tuxy (basement)", id: "tuxy", items: [
-      { id: "tm1", label: "½ can Fancy Feast", note: "Save the other half for Linguini. Watch your head on the stairs — she will ambush you!" },
+      { id: "tm1", label: "½ can Fancy Feast", note: "Save the other half for Linguini. Watch your head on the stairs — she WILL ambush you!" },
       { id: "tm2", label: "Check dry food bowl (diet food, storage box by litter)" },
-      { id: "tm3", label: "Check water bowl / fountain in basement is running" }
+      { id: "tm3", label: "Check water fountain in basement is running" }
     ]},
     { animal: "🐱 Linguini / Luigi (indoors only)", id: "luigi", items: [
       { id: "lm1", label: "Dry food if bowl is empty — skip if still full", note: "Refill bags at top of garage stairs." },
@@ -234,11 +192,11 @@ const tasks = {
       { id: "cm1", label: "Check coop latch is secure for the night ahead", note: "They come back on their own at dusk — no need to round them up." },
       { id: "cm2", label: "Check water station — refill only if very dirty", note: "Hose water is fine. Can go 3 days if it looks clean." },
       { id: "cm3", label: "If letting them out: scatter 2–3 handfuls of seeds / party mix / worms + oyster shell", note: "Skip if there's an active hawk — leave them in the coop with food." },
-      { id: "cm4", label: "Collect eggs! (usually 2–3)", note: "Bell2 has a large mass on her front — she's had it since birth, it's normal." }
+      { id: "cm4", label: "Collect eggs! (usually 2–3)", note: "Bell2 has a large mass on her front since birth — normal." }
     ]},
-    { animal: "🐢 Speedy Hulk the tortoise", id: "tortoise", items: [
-      { id: "spm1", label: "Offer fresh greens or veg: lettuce, mushrooms, carrots, or Brussels sprouts", note: "She needs nutrients and hydration from food. Brussels sprouts are her favorite!" },
-      { id: "spm2", label: "Check water dish — replace only if very dirty", note: "She bathes in it to stay cool. If she's buried in a corner, she's hibernating — totally fine." }
+    { animal: "🐢 Speedy Hulkette the tortoise", id: "tortoise", items: [
+      { id: "spm1", label: "Offer fresh greens or veg: lettuce, mushrooms, carrots, or Brussels sprouts", note: "Once a day — morning only. She gets nutrients and hydration from food. Brussels sprouts are her favorite!" },
+      { id: "spm2", label: "Check water dish — replace only if very dirty", note: "She bathes in it to stay cool. If buried in a corner, she's hibernating — totally fine." }
     ]}
   ],
   evening: [
@@ -249,7 +207,7 @@ const tasks = {
       { id: "de4", label: "If they don't finish: bring bowls inside before dark", note: "Raccoons and possums will raid anything left out." },
       { id: "de5", label: "Put barking collars on both dogs if sleeping outside", note: "Check Henny's battery — needs replacing every ~3 days. Spare batteries provided." },
       { id: "de6", label: "Bring dogs inside to kitchen to sleep (gate closed)", note: "Always for Henny — he barks. Required if temp below 45°F or above 90°F." },
-      { id: "de7", label: "Side gate: latch properly if you passed through to the front of the house", note: "⚠️ Both dogs will bolt the moment it's left unlatched, even briefly.", urgent: true }
+      { id: "de7", label: "Side gate: latch properly if you passed through today", note: "⚠️ Both dogs will bolt the moment it's left unlatched, even briefly.", urgent: true }
     ]},
     { animal: "🐱 Tuxy (basement)", id: "tuxy_eve", items: [
       { id: "te1", label: "½ can Fancy Feast" },
@@ -262,26 +220,26 @@ const tasks = {
     ]},
     { animal: "🐔 Chickens", id: "chickens_eve", items: [
       { id: "ce1", label: "Chickens come back to the coop on their own at dusk", note: "Just make sure the coop gate is open for them beforehand." },
-      { id: "ce2", label: "Scatter a few treats inside if needed", note: "2–3 handfuls seeds/scraps. Skip if they were out all day and well-fed." },
-      { id: "ce3", label: "Lock the coop latch securely for the night", note: "Protects against neighbors' cats and raccoons. Little ones may sleep on the roof — that's fine." },
+      { id: "ce2", label: "Scatter a few treats inside if needed", note: "2–3 handfuls seeds/scraps. Skip if they were out and well-fed all day." },
+      { id: "ce3", label: "Lock the coop latch securely for the night", note: "Protects against neighbors' cats and raccoons. Little ones may sleep on the roof — fine." },
       { id: "ce4", label: "Collect any evening eggs (usually 1)" }
     ]},
-    { animal: "🐢 Speedy Hulk", id: "tortoise_eve", items: [
-      { id: "spe1", label: "Offer fresh greens or veg if not already given today", note: "Lettuce, mushrooms, baby carrots, or Brussels sprouts. If she's buried and not eating, she's hibernating — that's fine." }
+    { animal: "🐢 Speedy Hulkette", id: "tortoise_eve", items: [
+      { id: "spe1", label: "Check water dish — replace if very dirty", note: "Food is morning only. If she's buried and not eating, she's hibernating — that's fine." }
     ]}
   ],
   asneeded: [
     { animal: "🐔 Coop maintenance", id: "coopclean", items: [
-      { id: "cc0", label: "Hose down the coop floor — once a week or so", note: "Just a quick rinse to keep it fresh." },
+      { id: "cc0", label: "Hose down the coop roof — once a week or so", note: "The roof, not the floor. Quick rinse to keep it fresh." },
       { id: "cc1", label: "Clean #2 off feeding dish and water source", note: "Latex gloves strongly recommended — they are gross." },
       { id: "cc2", label: "Add fresh hay to the coop roof for bedding", note: "Fresh hay is in the basement." },
       { id: "cc3", label: "Refill dry meal square in the metal mesh basket — 1–2x per week" },
-      { id: "cc4", label: "Fill the bird feeder next to the coop with wild bird seeds — if feeling nice 🐦", note: "Optional. The crows treat this yard as their personal bistro (fermented cherries — they come for the buzz)." }
+      { id: "cc4", label: "Fill the bird feeder next to the coop with wild bird seeds — if feeling nice 🐦", note: "Optional. The crows treat this yard as their bistro (fermented cherries — they come for the buzz)." }
     ]},
     { animal: "🧹 Indoor cleaning", id: "clean", items: [
-      { id: "an1", label: "Clean Linguini's litter box — every 2 days, 3 max", note: "⚠️ Non-negotiable. Scooper + bags under kitchen table. Extra litter sand in the basement.", urgent: true },
+      { id: "an1", label: "Clean Linguini's litter box — every 2 days, 3 max", note: "⚠️ Non-negotiable. He will go on the bed and all over the house. Scooper + bags under kitchen table. Extra litter sand in the basement.", urgent: true },
       { id: "an2", label: "Check Tuxy's litter box in basement", note: "Clean if not acceptable. Scooper + bags next to it. Extra litter sand right there." },
-      { id: "an3", label: "Dog #2 in the pathway", note: "Scoop into paper bags from the chicken trunk, trash outside. Trash day: Tuesday morning." }
+      { id: "an3", label: "Dog #2 in the pathway", note: "Scoop into paper bags from the chicken trunk and trash outside. Trash day: Tuesday morning." }
     ]},
     { animal: "🌡️ Temperature rules", id: "weather", items: [
       { id: "wt1", label: "Below 45°F at night: both dogs sleep in kitchen (gate closed)", note: "Linguini can pass under the soft gate to access his litter box." },
@@ -290,7 +248,7 @@ const tasks = {
     ]},
     { animal: "🦅 Hawk protocol", id: "hawk", items: [
       { id: "hk1", label: "Crows making noise and flying overhead = hawk is around", note: "Do NOT let the chickens out — leave them in the coop with food for the day." },
-      { id: "hk2", label: "If a chicken is lost to a hawk", note: "Sad but it happens — we've lost a few. Don't panic. Animal control: bag the carcass and place in regular trash. No pickup. Text us." }
+      { id: "hk2", label: "If a chicken is lost to a hawk", note: "Sad but it happens — we've lost a few. Don't panic. Animal control: bag carcass in regular trash. No pickup. Text us." }
     ]}
   ]
 };
@@ -298,7 +256,6 @@ const tasks = {
 let checked = {};
 try { const r = localStorage.getItem('taveau_zoo_v2'); if (r) checked = JSON.parse(r); } catch(e) {}
 function save() { try { localStorage.setItem('taveau_zoo_v2', JSON.stringify(checked)); } catch(e) {} }
-
 function toggle(id) { checked[id] = !checked[id]; save(); renderAll(); }
 function resetTab(tab) { (tasks[tab]||[]).forEach(s => s.items.forEach(i => { checked[i.id] = false; })); save(); renderAll(); }
 
@@ -339,7 +296,6 @@ function buildSections(tab, cid) {
 }
 
 function toggleSection(h) { h.closest('.animal-section').classList.toggle('collapsed'); }
-
 function switchTab(name) {
   document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
@@ -347,7 +303,6 @@ function switchTab(name) {
   if (idx >= 0) document.querySelectorAll('.tab-btn')[idx].classList.add('active');
   document.getElementById('tab-'+name).classList.add('active');
 }
-
 function renderAll() {
   buildSummary('morning'); buildSections('morning','morning-sections');
   buildSummary('evening'); buildSections('evening','evening-sections');
